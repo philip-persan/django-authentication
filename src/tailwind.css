@@ -4,6 +4,92 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  header {
+    @apply w-full h-full bg-pBgDark flex items-center justify-around text-pGray font-medium;
+  }
+  header > nav {
+    @apply flex items-center justify-center gap-3;
+  }
+  header > nav > a {
+    @apply hover:underline hover:decoration-pRed;
+  }
+  main {
+    @apply relative text-pWhite flex items-center justify-center gap-10;
+  }
+  main > h1 {
+    @apply absolute top-5 font-bold text-lg underline decoration-pRed uppercase tracking-wider;
+  }
+  footer {
+    @apply bg-pBgDark flex items-center justify-around text-pGray font-medium text-xs;
+  }
+}
+
+@layer components {
+  header > img {
+    @apply hidden sm:block sm:h-1/2;
+  }
+  .user {
+    @apply relative flex items-center justify-center;
+  }
+  .user > span {
+    @apply font-bold;
+  }
+  .drop {
+    @apply absolute top-7 w-fit p-3 bg-pBgDark rounded z-10;
+  }
+  .drop > a,
+  .drop button {
+    @apply flex items-center justify-start gap-2 cursor-pointer;
+  }
+  .log-form {
+    @apply bg-pWhite text-pDrak p-6 rounded;
+  }
+  .log-form > form {
+    @apply flex flex-col items-start justify-center sm:text-lg gap-5;
+  }
+  .log-form > form > a {
+    @apply text-xs text-pRed underline;
+  }
+  .log-form > form > .form-group > input {
+    @apply bg-transparent border-b-2 border-pDrak outline-none mt-2;
+  }
+  .log-form > form > .form-group > label {
+    @apply block font-semibold;
+  }
+  .log-form > form > button {
+    @apply px-3 py-2 bg-pDarkRed rounded font-bold text-pWhite self-center;
+  }
+  .reg-form {
+    @apply bg-pWhite text-pDrak p-6 rounded;
+  }
+  .reg-form > h1 {
+    @apply text-sm sm:text-xl font-bold text-center mb-4;
+  }
+  .reg-form > form {
+    @apply grid grid-cols-2 grid-rows-4 gap-5 text-xs sm:text-lg;
+  }
+  .reg-form > form > .form-group > input {
+    @apply bg-transparent border-b-2 border-pDrak outline-none mt-2;
+  }
+  .reg-form > form > .form-group > label {
+    @apply block font-semibold;
+  }
+  .reg-form > form > button {
+    @apply px-3 py-2 col-span-2 w-fit place-self-center bg-pDarkRed rounded font-bold text-pWhite self-center;
+  }
+  .social {
+    @apply flex items-center justify-center gap-3 text-sm sm:text-2xl;
+  }
+}
+
 * {
   font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 10vh 80vh 10vh;
+  background-color: #333333;
 }
