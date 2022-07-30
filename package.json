@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss ./src/tailwind.css -o ./src/css/style.css --watch"
+    "dev": "postcss ./src/tailwind.css -o ./src/css/style.css --watch",
+    "django": "postcss ./src/tailwind.css -o ./base_static/global/css/style.css --watch"
   },
   "keywords": [],
   "author": "",

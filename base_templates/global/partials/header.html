@@ -1,0 +1,22 @@
+{% load static %}
+<header class="">
+    <img src="{% static 'global/images/fingerprint-scan.png' %}" alt="">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#About">About</a>
+    </nav>
+    <div class="log-sign">
+        <a href="#login">Login</a>
+        <a href="#login">Signup</a>
+    </div>
+    <div id="user" class="user cursor-pointer">
+        <span class="">Persan <i class="bi bi-caret-down-fill"></i></span>
+        <div id="drop" class="drop">
+            <a href="#profile"><i class="bi bi-person-square"></i> Profile</a>
+            <form action="#logout" method="post">
+                <button type="submit"><i class="bi bi-box-arrow-left"></i>Logout</button>
+            </form>
+        </div>
+    </div>
+</header>
