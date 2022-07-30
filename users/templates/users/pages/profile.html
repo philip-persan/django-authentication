@@ -1,0 +1,9 @@
+{% extends 'global/base.html' %}
+{% block content %}
+<div class="user-info">
+    <h1>{{ user.get_full_name }}</h1>
+    <p>First Name: {{user.first_name}}</p>
+    <p>Last Name: {{user.last_name}}</p>
+    <p>E-mail: {{user.email}}</p>
+</div>
+{% endblock content %}

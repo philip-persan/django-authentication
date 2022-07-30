@@ -1,0 +1,16 @@
+{% extends 'global/base.html' %}
+{% block content %}
+<div class="reg-form">
+    <h1>Create Account</h1>
+    <form action="{% url 'users:signup' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <label for="field.id_for_label">{{ field.label }}:</label>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <button type="submit">Register!</button>
+    </form>
+</div>
+{% endblock content %}

@@ -21,7 +21,7 @@
     @apply absolute top-5 font-bold text-lg underline decoration-pRed uppercase tracking-wider;
   }
   footer {
-    @apply bg-pBgDark flex items-center justify-around text-pGray font-medium text-xs;
+    @apply bg-pBgDark flex items-center justify-around text-pGray font-medium text-xs sm:text-lg;
   }
 }
 
@@ -80,6 +80,24 @@
   }
   .social {
     @apply flex items-center justify-center gap-3 text-sm sm:text-2xl;
+  }
+  .info {
+    @apply p-5 bg-pWhite text-pDrak rounded flex flex-col items-start justify-center;
+  }
+  .info > h1 {
+    @apply text-xl sm:text-4xl mb-5 font-bold text-center place-self-center;
+  }
+  .info > p {
+    @apply text-sm sm:text-xl font-medium;
+  }
+  .info > p > a {
+    @apply text-pRed;
+  }
+  .log-sign {
+    @apply flex items-center justify-center gap-3;
+  }
+  .log-sign > a {
+    @apply hover:underline hover:decoration-pRed;
   }
 }
 
